@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Talent" load_steps=3 format=3 uid="uid://csjbpf13eid16"]
+
+[ext_resource type="Script" uid="uid://500ck2nemrrn" path="res://Scripts/talent.gd" id="1_vbmcq"]
+[ext_resource type="Texture2D" uid="uid://cxybp2s4s2kt5" path="res://icon.svg" id="2_26ibd"]
+
+[resource]
+script = ExtResource("1_vbmcq")
+id = "Dash"
+description = "Dash Talent"
+level = 0
+maxlevel = 3
+bindkey = "Dash"
+icon = ExtResource("2_26ibd")
+metadata/_custom_type_script = "uid://500ck2nemrrn"

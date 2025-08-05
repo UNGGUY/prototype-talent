@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://chflkksdjagde"]
+
+[ext_resource type="PackedScene" uid="uid://cfeep55ywyitg" path="res://Scenes/talent_button.tscn" id="1_l1ncj"]
+[ext_resource type="Resource" uid="uid://by17rfwakl372" path="res://Resources/Base.tres" id="2_usylv"]
+[ext_resource type="Resource" uid="uid://csjbpf13eid16" path="res://Resources/Dash.tres" id="3_jut72"]
+[ext_resource type="Resource" uid="uid://bxgqkcdfelgm5" path="res://Resources/Rush.tres" id="4_em3nh"]
+
+[node name="TalentPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BaseButton" parent="." instance=ExtResource("1_l1ncj")]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 204.0
+offset_right = 367.0
+offset_bottom = 332.0
+talent = ExtResource("2_usylv")
+
+[node name="RushButton" parent="BaseButton" instance=ExtResource("1_l1ncj")]
+layout_mode = 0
+offset_left = -158.0
+offset_top = -185.0
+offset_right = -30.0
+offset_bottom = -57.0
+talent = ExtResource("4_em3nh")
+
+[node name="DashButton" parent="BaseButton" instance=ExtResource("1_l1ncj")]
+layout_mode = 0
+offset_left = 161.0
+offset_top = -181.0
+offset_right = 289.0
+offset_bottom = -53.0
+talent = ExtResource("3_jut72")

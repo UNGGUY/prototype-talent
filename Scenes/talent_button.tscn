@@ -1,0 +1,79 @@
+[gd_scene load_steps=14 format=3 uid="uid://cfeep55ywyitg"]
+
+[ext_resource type="Script" uid="uid://ipbox3a7be4p" path="res://Scripts/talent_button.gd" id="1_sxswm"]
+[ext_resource type="Texture2D" uid="uid://cxybp2s4s2kt5" path="res://icon.svg" id="2_jvc2y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jvc2y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hpmi0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xn8m8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mqwtl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_colep"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sijbj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3wf7y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lhtr5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qsujl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3c1i6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pfkml"]
+
+[node name="TalentButton" type="Button"]
+offset_right = 128.0
+offset_bottom = 128.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jvc2y")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hpmi0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_xn8m8")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_mqwtl")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_colep")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_sijbj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3wf7y")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lhtr5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qsujl")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_3c1i6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pfkml")
+script = ExtResource("1_sxswm")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jvc2y")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0/0"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+mouse_filter = 2
+
+[node name="Line2D" type="Line2D" parent="."]
+top_level = true
+z_index = -1
+width = 3.0
+default_color = Color(0.355314, 0.355314, 0.355314, 1)
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

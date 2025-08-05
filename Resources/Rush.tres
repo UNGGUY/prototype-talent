@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Talent" load_steps=3 format=3 uid="uid://bxgqkcdfelgm5"]
+
+[ext_resource type="Script" uid="uid://500ck2nemrrn" path="res://Scripts/talent.gd" id="1_onpdw"]
+[ext_resource type="Texture2D" uid="uid://cxybp2s4s2kt5" path="res://icon.svg" id="2_72u0s"]
+
+[resource]
+script = ExtResource("1_onpdw")
+id = "Rush"
+description = "Rush Talent"
+level = 0
+maxlevel = 1
+bindkey = ""
+icon = ExtResource("2_72u0s")
+metadata/_custom_type_script = "uid://500ck2nemrrn"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Talent" load_steps=3 format=3 uid="uid://by17rfwakl372"]
+
+[ext_resource type="Script" uid="uid://500ck2nemrrn" path="res://Scripts/talent.gd" id="1_8fxnf"]
+[ext_resource type="Texture2D" uid="uid://cxybp2s4s2kt5" path="res://icon.svg" id="2_j2il8"]
+
+[resource]
+script = ExtResource("1_8fxnf")
+id = "Base"
+description = "Base Talent"
+level = 0
+maxlevel = 5
+bindkey = ""
+icon = ExtResource("2_j2il8")
+metadata/_custom_type_script = "uid://500ck2nemrrn"
