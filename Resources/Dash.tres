@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_vbmcq")
-id = "Dash"
+id = 1
 description = "Dash Talent"
 level = 0
 maxlevel = 3

@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_8fxnf")
-id = "Base"
+id = 0
 description = "Base Talent"
 level = 0
 maxlevel = 5

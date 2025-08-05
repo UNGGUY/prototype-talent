@@ -1,7 +1,7 @@
 class_name Talent extends Resource
 
 
-@export var id:String
+@export var id:int
 
 @export var description:String
 

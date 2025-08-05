@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CharacterResource" load_steps=4 format=3 uid="uid://qgd8bomuphda"]
+
+[ext_resource type="Script" uid="uid://co1a00hajb18r" path="res://Scripts/character_resource.gd" id="1_itx4c"]
+[ext_resource type="Script" uid="uid://500ck2nemrrn" path="res://Scripts/talent.gd" id="2_7ugcd"]
+[ext_resource type="Resource" uid="uid://by17rfwakl372" path="res://Resources/Base.tres" id="2_kxh05"]
+
+[resource]
+script = ExtResource("1_itx4c")
+talents = Array[ExtResource("2_7ugcd")]([ExtResource("2_kxh05"), null, null])
+metadata/_custom_type_script = "uid://co1a00hajb18r"

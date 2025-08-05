@@ -5,9 +5,8 @@ class_name TalentButton extends Button
 @onready var panel: Panel = $Panel
 @onready var line_2d: Line2D = $Line2D
 
-
-
 @export var talent:Talent
+signal  talent_change(talent:Talent)
 
 var level : int = 0 :
 	set(value):
@@ -23,10 +22,20 @@ func _ready() -> void:
 		line_2d.add_point(global_position+size/2)
 		line_2d.add_point(get_parent().global_position + size/2)
 		
+		
+		
 	
 	
 
 
 func _on_pressed() -> void:
 	level = min(level+1,talent.maxlevel)
+	talent.level = level
+	TalentUtilis.talent_change.emit(talent)
 	panel.show_behind_parent = true
+	
+	
+	
+
+	
+	

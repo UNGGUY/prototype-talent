@@ -1,6 +1,7 @@
-class_name Player extends CharacterBody2D
+class_name Player1 extends CharacterBody2D
 
 
+@export var character_resource:CharacterResource
 @onready var canvas_layer: CanvasLayer = $CanvasLayer
 
 const TALENT_TREE = preload("res://Scenes/talent_panel.tscn")
@@ -9,9 +10,16 @@ var is_talent_tree_open:bool = false
 var direction:Vector2
 var SPEED:float = 300.0
 
+var DASH_SPEED:float = 1200.0
+
+
+
+
+
 func _ready() -> void:
 	canvas_layer.add_child(TALENT_TREE.instantiate())
 	canvas_layer.visible = false
+	TalentUtilis.talent_change.connect(update_character_resource)
 	
 
 func _input(event: InputEvent) -> void:
@@ -27,6 +35,12 @@ func _physics_process(delta: float) -> void:
 	
 	velocity = direction * SPEED
 	
+	
+	if Input.is_action_pressed("dash") and character_resource.talents[1]:
+		velocity = velocity.normalized()
+		velocity.x = direction.x * DASH_SPEED
+		velocity.y = direction.y * DASH_SPEED
+	
 	move_and_slide()
 	
 	
@@ -39,3 +53,6 @@ func _close_talent_tree():
 	is_talent_tree_open = false
 	canvas_layer.visible = false
 	
+	
+func update_character_resource(talent:Talent)->void:
+	character_resource.talents[talent.id]=talent

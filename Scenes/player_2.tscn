@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cewqos1iijosv"]
+
+[ext_resource type="Script" uid="uid://cfi52kfmjtf3n" path="res://Scripts/player_2.gd" id="1_cgts5"]
+[ext_resource type="Texture2D" uid="uid://cxybp2s4s2kt5" path="res://icon.svg" id="1_mkara"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cgts5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mkara")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player2" type="CharacterBody2D"]
+script = ExtResource("1_cgts5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cgts5")
